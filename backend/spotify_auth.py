@@ -101,7 +101,7 @@ async def callback(request: Request):
         httponly=True,
         max_age=60*60*24*7,
         secure=True,
-        samesite="lax",
+        samesite="none",
     )
 
     return response
