@@ -17,6 +17,7 @@ load_dotenv()
 CLIENT_ID = os.getenv("SPOTIFY_CLIENT_ID")
 CLIENT_SECRET = os.getenv("SPOTIFY_CLIENT_SECRET")
 REDIRECT_URI = os.getenv("SPOTIFY_REDIRECT_URI")
+FRONTEND_URL = os.getenv("FRONTEND_URL")
 
 @router.get("/login")
 async def login():
@@ -93,7 +94,7 @@ async def callback(request: Request):
     db.commit()
     db.close()
 
-    response = RedirectResponse(url="http://127.0.0.1:5173", status_code=302)
+    response = RedirectResponse(url=FRONTEND_URL, status_code=302)
     response.set_cookie(
         key="session_token",
         value=session_token,
@@ -107,6 +108,6 @@ async def callback(request: Request):
 
 @router.get("/logout")
 async def logout(request: Request):
-    response = RedirectResponse(url="http://127.0.0.1:5173")
+    response = RedirectResponse(url=FRONTEND_URL)
     response.delete_cookie(key="session_token", path="/")
     return response

@@ -14,12 +14,13 @@ from vector_db import load_faiss_index
 models.Base.metadata.create_all(bind=engine)
 
 load_dotenv()
+FRONTEND_URL = os.getenv("FRONTEND_URL")
 
 app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://127.0.0.1:5173"],
+    allow_origins=[FRONTEND_URL],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"]

@@ -1,9 +1,11 @@
 import React from 'react';
 import './Login.css'
 
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+
 const Login = () => {
     const handleLogin = async () => {
-        window.location.href = 'http://127.0.0.1:8000/auth/login';
+        window.location.href = `${BACKEND_URL}/auth/login`;
     };
 
     return (

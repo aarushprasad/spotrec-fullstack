@@ -1,6 +1,8 @@
 import React from "react";
 import './Logout.css'
 
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+
 export default function Logout() {
     const handleLogout = () => {
         const spotifyLogoutWindow = window.open(
@@ -13,7 +15,7 @@ export default function Logout() {
             if (spotifyLogoutWindow) {
                 spotifyLogoutWindow.close();
             }
-            window.location.href = "http://127.0.0.1:8000/auth/logout";
+            window.location.href = `${BACKEND_URL}/auth/logout`;
         }, 1500);
     };
 
