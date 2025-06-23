@@ -100,7 +100,7 @@ async def callback(request: Request):
         value=session_token,
         httponly=True,
         max_age=60*60*24*7,
-        secure=False,
+        secure=True,
         samesite="lax",
     )
 
