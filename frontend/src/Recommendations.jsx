@@ -51,7 +51,7 @@ export default function Recommendations() {
   return (
     <div className="recommendations-wrapper">
       <h2>Personalized Recommendations</h2>
-      <h4>Extrapolated from your liked tracks. These might take a few seconds to load.</h4>
+      <h4>Extrapolated from your liked tracks. These might take a few seconds to load. Meanwhile, view our <a href="https://sites.google.com/view/spotrec/privacy-policy">Privacy Policy</a></h4>
       <div className="recommendations-container">
         {trackIds.map((id, idx) => (
           <iframe

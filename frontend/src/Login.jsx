@@ -13,7 +13,7 @@ const Login = () => {
              <div className="login-box">
                 <h1>SpotRec</h1>
                 <p>Your personalized Spotify recommendation engine, built just for you.</p>
-                <p>No fluff, just tunes. Discover new tracks based on your music taste, using machine learning under the hood.</p>
+                <p>No fluff, just tunes. Discover new tracks based on your music taste, using machine learning under the hood. Our <a href="https://sites.google.com/view/spotrec/privacy-policy"> Privacy Policy </a> </p>
                 <button className="login-button" onClick={handleLogin}>
                     Login with Spotify
                 </button>
