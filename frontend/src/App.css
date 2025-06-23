@@ -1,0 +1,33 @@
+/*
+.app-container {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica', sans-serif;
+  background: linear-gradient(to right, #000000, #1db954);
+  min-height: 100vh;
+  color: white;
+}
+*/
+
+.checking-login-msg {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1db954; /* spotify green */
+  text-align: center;
+  margin-top: 30vh;
+  animation: pulseFade 1.5s infinite;
+}
+
+/* lil pulsing glow while it loads */
+@keyframes pulseFade {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+

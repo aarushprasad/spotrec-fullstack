@@ -1,0 +1,22 @@
+.logout-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  background-color: #000000; /* spotify green */
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.logout-button:hover {
+  background-color: #1ed760;
+  transform: scale(1.05);
+}
+
